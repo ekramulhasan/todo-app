@@ -4,7 +4,17 @@
 
 <template>
 
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga incidunt ipsa ducimus dolorum assumenda. Voluptatum, delectus reprehenderit aut eveniet, repellendus facere veniam fugiat et, soluta sequi recusandae maxime unde odit.</h1>
+    <div class="row">
+        <div class="col-10 m-auto mt-5">
+            <div class="card">
+                <div class="card-body">
+
+                    <h1>hello world</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 </template>
 
