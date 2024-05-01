@@ -1,5 +1,13 @@
 <script setup>
+import { onMounted } from 'vue';
+import { useTodoStore } from './stores/todo';
 
+const useTodo = useTodoStore();
+
+onMounted(()=>{
+
+    useTodo.getAllTodos();
+})
 </script>
 
 <template>
@@ -34,7 +42,9 @@
 
                         <ul class="list-group mb-3">
 
-                            <li class="list-group-item d-flex justify-content-between">added new task <a href=""
+                            <li class="list-group-item d-flex justify-content-between" v-for="todo in useTodo.todos" :key="todo.id">
+                                <span :class="todo.completed ? 'text-decoration-line-through' : '' "> {{ todo.title }} </span>
+                                <a href=""
                                     class="text-danger"> <i class="fa-solid fa-xmark"></i></a></li>
 
                         </ul>
